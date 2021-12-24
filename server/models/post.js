@@ -19,7 +19,7 @@ const PostSchema = new mongoose.Schema({
         default: "https://source.unsplash.com/random/301x201"
     },
     date: {
-        type: String,
+        type: Date,
         default: moment().format("YYYY-MM-DD hh:mm:ss"),
     },
     category: {
