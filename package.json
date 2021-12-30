@@ -4,18 +4,20 @@
     "description": "",
     "main": "index.js",
     "scripts": {
-        "dev": "nodemon --exec ./node_modules/.bin/babel-node ./server/server.js  --ignore './client'",
-        "dev-watch": "babel-watch ./server/server.js  --ignore './client'"
+        "dev": "nodemon --exec ./node_modules/.bin/babel-node ./server/init.js  --ignore './client'",
+        "dev-watch": "babel-watch ./server/init.js  --ignore './client'"
     },
     "author": "",
     "license": "ISC",
     "dependencies": {
         "babel-watch": "^7.7.0",
+        "bcrypt": "^5.0.1",
         "cors": "^2.8.5",
         "dotenv": "^10.0.0",
         "express": "^4.17.2",
         "helmet": "^4.6.0",
         "hpp": "^0.2.3",
+        "jsonwebtoken": "^8.5.1",
         "moment": "^2.29.1",
         "mongoose": "^6.1.3"
     },

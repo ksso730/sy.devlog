@@ -2,9 +2,9 @@ import express from "express";
 
 import { getPost, postPost } from "../controllers/postController.js"
 
-const router = express.Router();
+const postRouter = express.Router();
 
-router.get("/", getPost);
-router.post("/", postPost);
+postRouter.get("/:id([0-9a-f]{24})", getPost);
+postRouter.post("/upload", postPost);
 
 export default postRouter;
