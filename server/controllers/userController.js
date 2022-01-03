@@ -1,6 +1,7 @@
 import User from '../models/User';
 import "dotenv/config";
 import jwt from "jsonwebtoken"
+import bcrypt from "bcrypt"
 
 export const getUser = async(req, res) => {
     try {
@@ -37,22 +38,22 @@ export const postUser = async(req, res) => {
             password
         });
 
-        // 단방향 해쉬값
-        bcrypt.genSalt(10, (err, salt) => {
-            bcrypt.hash(newUser.password, salt, (err, hash) => {
-                if (err) throw err;
-                newUser.password = hash;
-                newUser.save().then((user) => {
-                    jwt.sign({ id: user.id },
-                        process.env.JWT_SECRET, { expiresIn: 3600 },
-                        (err, token) => {
-                            if (err) throw err;
-
+        console.log(newUser);
+        // newUser 등록
+        newUser.save().then((user) => {
+            jwt.sign({ id: user.id }, process.env.JWT_SECRET, { expiresIn: 3600 }, (err, token) => {
+                    if (err) throw err;
+                    res.json({
+                        token,
+                        user: {
+                            id: user.id,
+                            name: user.name,
+                            email: user.email
                         }
-                    )
-                })
-            })
-        })
+                    });
+                }) //jwt.sign
+        });
+
 
     });
 }
