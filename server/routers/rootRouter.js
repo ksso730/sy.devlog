@@ -6,6 +6,6 @@ const rootRouter = express.Router();
 
 rootRouter.get("/", home);
 rootRouter.get("/posts", getAllPosts);
-rootRouter.post("/login", postUser);
+rootRouter.post("/signin", postUser);
 
 export default rootRouter;
