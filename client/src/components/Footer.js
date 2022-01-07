@@ -7,7 +7,7 @@ const Footer = () => {
         return year;
     }
     return (
-        <div id="main-footer" className="text-center m-auto">
+        <div id="main-footer" className="text-center p-2">
             <Row>
                 <Col>
                     <p>Copyright &copy; <span>{thisYear()}</span></p>

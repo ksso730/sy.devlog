@@ -2,3 +2,35 @@
     background-color: rgb(119, 90, 102);
     color: #fff;
 }
+
+#page-header {
+    height: 750px;
+    background: url('../assets/img/blogbackground.png');
+    background-position: 70% 50%;
+    background-repeat: no-repeat;
+    background-size: 500px;
+    box-shadow : 0px -8vpx 30px 0px rgba(27, 27, 27, .2) inset;
+    color: rgb(53, 53, 53);
+    padding: 300px;
+}
+
+#page-header {
+    -webkit-animation-name: rotate;
+    -webkit-animation-duration:2s;
+    -webkit-animation-iteration-count:infinite;
+    -webkit-animation-timing-function:linear;
+    -moz-animation-name: rotate;
+    -moz-animation-duration:2s;
+    -moz-animation-iteration-count:infinite;
+    -moz-animation-timing-function:linear;
+  }
+
+.align-me {
+    display: flex;
+    align-items: center;
+}
+
+// @keyframes rotate {
+//     from {-webkit-transform:rotate(0deg);}
+//     to {  -webkit-transform:rotate(360deg);}
+// }
