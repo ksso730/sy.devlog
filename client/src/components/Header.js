@@ -3,7 +3,6 @@ import {Container, Row, Col} from 'reactstrap'
 
 const Header = () => {
     return (
-        // <div id="page-header" className="mb-3 align-me">
         <Container id="page-header">
             <Row>
                 <Col md="6" sm="auto" className="m-auto header_text">
@@ -16,7 +15,6 @@ const Header = () => {
                 </Col>
             </Row>
         </Container>
-        // </div>
     )
 }
 
